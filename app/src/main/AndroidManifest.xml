@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="android.jonas.fakestandby">
 
+    <permission
+        android:description="@string/start_stop_permission_description"
+        android:label="@string/start_stop_permission_label"
+        android:name="android.jonas.fakestandby.START_STOP"
+        android:protectionLevel="dangerous" />
+    
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -20,14 +26,16 @@
             android:enabled="true"
             android:exported="true"
             android:icon="@drawable/app_icon_adaptive"
-            android:label="@string/action_start_overlay" />
+            android:label="@string/action_start_overlay"
+            android:permission="android.jonas.fakestandby.START_STOP" />
 
         <activity
             android:name=".actions.StopOverlay"
             android:enabled="true"
             android:exported="true"
             android:icon="@drawable/app_icon_adaptive"
-            android:label="@string/action_stop_overlay" />
+            android:label="@string/action_stop_overlay"
+            android:permission="android.jonas.fakestandby.START_STOP" />
 
         <activity
             android:name=".settings.SettingsActivity"
