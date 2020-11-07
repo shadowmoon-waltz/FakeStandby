@@ -16,10 +16,6 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".onboarding.OnBoardingActivity"
-            android:label="Welcome to FakeStandby" />
-
-        <activity
             android:name=".actions.StartOverlay"
             android:enabled="true"
             android:exported="true"

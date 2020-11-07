@@ -3,7 +3,7 @@ package android.jonas.fakestandby.settings;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.jonas.fakestandby.BuildConfig;
-import android.jonas.fakestandby.onboarding.OnBoardingActivity;
+//import android.jonas.fakestandby.onboarding.OnBoardingActivity;
 import android.jonas.fakestandby.permissions.AccessibilityServiceNotEnabledDialog;
 import android.jonas.fakestandby.permissions.AccessibilityServiceNotRunningDialog;
 import android.os.Bundle;
@@ -28,11 +28,11 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (BuildConfig.DEBUG && !getIntent().getBooleanExtra("skip_intro", false)) {
-        //if (Utils.isFirstOpen(this) || BuildConfig.DEBUG) {
-            Intent i = new Intent(this, OnBoardingActivity.class);
-            //startActivity(i);
-        }
+        //if (BuildConfig.DEBUG && !getIntent().getBooleanExtra("skip_intro", false)) {
+        ////if (Utils.isFirstOpen(this) || BuildConfig.DEBUG) {
+        //    Intent i = new Intent(this, OnBoardingActivity.class);
+        //    //startActivity(i);
+        //}
 
         inflateSettings();
 
