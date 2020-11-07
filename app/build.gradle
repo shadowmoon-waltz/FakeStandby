@@ -32,6 +32,10 @@ android {
                 checkReleaseBuilds false
                 abortOnError false
             }
+            
+            if(signConfigExists) {
+                signingConfig signingConfigs.release
+            }
         }
         debug {
             signingConfig signingConfigs.debug
