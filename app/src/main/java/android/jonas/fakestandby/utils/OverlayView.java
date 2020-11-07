@@ -17,6 +17,9 @@ public class OverlayView extends View {
 
     private OnHideFinishedListener onHideFinishedListener = null;
 
+    private final int imhereSize = 10;
+    private final int imhereColor = 0xffffffff;
+    
     public OverlayView(Context context) {
         super(context);
     }
@@ -27,8 +30,13 @@ public class OverlayView extends View {
         int width = getWidth();
         int height = getHeight();
 
-        canvas.drawRect(0,0, (float) width, height-yBorder, new Paint());
+        float h = height-yBorder;
+        Paint ip = new Paint();
+        canvas.drawRect(0,0, (float) width, h, ip);
 
+        ip.setColor(imhereColor);
+        canvas.drawRect(width/2-imhereSize/2, h/2-imhereSize/2, width/2+imhereSize/2, h/2+imhereSize/2, ip);
+        
         if (hiding) {
             if (yBorder > height) {
                 hiding = false;
