@@ -1,3 +1,19 @@
+Fork (with only minor changes) of [project of same name](https://github.com/JonasBernard/FakeStandby). Changes will be described in this section; other sections are from original readme and may not reflect fork changes.
+
+The license is unchanged (GPL-3.0 License).
+
+The only functional changes are minor: adding a small square in the center of the overlay to remind you that FakeStandby is active (still need to add a user configurable option to enable/disable/change size) and adding a permission to launch the activity to enable/disable the overlay.
+
+Using release signing based on "gradle.properties" in your gradle config directory (which usually defaults to "~/.gradle").
+Add the following lines to that file `
+keystoreFile=C:\\somewhere\\key.jks
+keystorePassword=<keystore password>
+keystoreAlias=<key alias>
+keystoreAliasPassword=<key password>
+`
+
+---
+
 <div>
    <h1 align="center">FakeStandby<br><h6 align="center">An Android app for turning the screen off while keeping apps running.</h6></h1>
    <p align="center">
