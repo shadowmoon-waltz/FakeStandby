@@ -2,6 +2,8 @@ Fork (with only minor changes) of [project of same name](https://github.com/Jona
 
 The license is unchanged (GPL-3.0 License).
 
+Main gradle build target: assembleAdfreeRelease
+
 The only functional changes are minor: adding a small square in the center of the overlay to remind you that FakeStandby is active (still need to add a user configurable option to enable/disable/change size) and adding a permission to launch the activity to enable/disable the overlay.
 
 Using release signing based on "gradle.properties" in your gradle config directory (which usually defaults to "~/.gradle").
